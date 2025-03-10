@@ -1,23 +1,17 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const Refexample = () => {
-	const logValue = () => {
-		// inputRef.current.focus();
-		inputRef.current.value = 'Pedro';
-	};
-
-	const inputRef = useRef();
-
+	const [count, setCount] = useState(0);
+	const previousCount = useRef(0);
 	useEffect(() => {
-		console.log('Page rerendered');
-	});
-
+		previousCount.current = count;
+	}, [count]);
 	return (
 		<>
-			<div className="form">
-				<input type="text" ref={inputRef} />
-				<button onClick={logValue}>Console Log </button>
-			</div>
+			<h1 style={{ textAlign: 'center' }}>{count}</h1>
+
+			<button onClick={() => setCount((prev) => prev + 1)}>Increment</button>
+			<p>Previous Count: {previousCount.current} </p>
 		</>
 	);
 };
