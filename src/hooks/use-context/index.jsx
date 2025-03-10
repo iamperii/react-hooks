@@ -1,20 +1,25 @@
-import { useState } from 'react';
+import { createContext, useContext, useState } from 'react';
+
+export const GlobalStateContext = createContext(null);
 
 export const ContextExample = () => {
 	const [isToggle, setIsToggle] = useState(false);
 
 	return (
-		<>
-			<div>
-				<h1>Parent Component</h1>
-				<ChildToggle setIsToggle={setIsToggle} />
-				<ChildDisplay isToggle={isToggle} />
-			</div>
-		</>
+		<GlobalStateContext.Provider value={{ isToggle, setIsToggle }}>
+			<>
+				<div>
+					<h1>Parent Component</h1>
+					<ChildToggle />
+					<ChildDisplay />
+				</div>
+			</>
+		</GlobalStateContext.Provider>
 	);
 };
 
-const ChildToggle = ({ setIsToggle }) => {
+const ChildToggle = () => {
+	const { setIsToggle } = useContext(GlobalStateContext);
 	return (
 		<>
 			<div>
@@ -26,7 +31,9 @@ const ChildToggle = ({ setIsToggle }) => {
 	);
 };
 
-const ChildDisplay = ({ isToggle }) => {
+const ChildDisplay = () => {
+	const { isToggle } = useContext(GlobalStateContext);
+
 	return (
 		<>
 			<div>
