@@ -4,6 +4,7 @@ import { EffectExample } from './hooks/use-effect/index';
 import { ContextExample } from './hooks/use-context';
 import { ReducerExample } from './hooks/use-reducer';
 import { Refexample } from './hooks/use-ref';
+import { ImperativeHandleExample } from './hooks/use-imperative-handle';
 
 const App = () => {
 	return (
@@ -12,7 +13,8 @@ const App = () => {
 			{/* <EffectExample /> */}
 			{/* <ContextExample /> */}
 			{/* <ReducerExample /> */}
-			<Refexample />
+			{/* <Refexample /> */}
+			<ImperativeHandleExample />
 		</>
 	);
 };
