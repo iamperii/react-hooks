@@ -1,0 +1,16 @@
+/* APP css */
+
+.form{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 400px;
+	input{
+		padding: 8px;
+		width: 100%;
+	}
+	button{
+		align-self: center;
+		width: 40%;
+	}
+}
