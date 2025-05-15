@@ -1,8 +1,4 @@
-Əlbəttə, Peri! Sənə `useState`-lə bağlı müxtəlif səviyyələrdə suallar hazırlayıram — asandan mürəkkəbə doğru. Sonda isə cavabları verəcəm. Bu suallar həm anlayışını yoxlamaq, həm də peşəkar səviyyəyə yüksəlmək üçündür.
-
----
-
-# useState Üzrə Sual Toplusu
+# useState Üzrə Suallar
 
 ### Sadə səviyyə
 
