@@ -7,6 +7,7 @@ import { Refexample } from './hooks/use-ref';
 import { ImperativeHandleExample } from './hooks/use-imperative-handle';
 import { LayoutEffectExample } from './hooks/use-layout-effect';
 import { InsertionEffectExample } from './hooks/use-insertion-effect';
+import { IdExample } from './hooks/use-id';
 
 const App = () => {
 	return (
@@ -18,7 +19,8 @@ const App = () => {
 			{/* <Refexample /> */}
 			{/* <ImperativeHandleExample /> */}
 			{/* <LayoutEffectExample /> */}
-			<InsertionEffectExample />
+			{/* <InsertionEffectExample /> */}
+			<IdExample />
 		</>
 	);
 };
